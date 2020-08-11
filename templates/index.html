@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Car Selling Price Prediction</title>
+</head>
+
+<body style="background-image:url({{url_for('static', filename='car_bg.jpg')}})">
+
+    <div class="heading">
+        <h2><span>Car selling price predictor</span></h2>
+        <div>
+            <p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+        </div>
+    </div>
+
+    <div>
+        <form action="{{ url_for('predict')}}" method="post">
+            <table>
+                <tr>
+                    <td><h3>Year when bought: </h3></td>
+                    <td><input class="textfield" name="Year" type="number" required="required"></td>
+                </tr>
+                <tr>
+                    <td><h3>Showroom Price (In lacs): </h3></td>
+                    <td><input class="textfield" name="Present_Price" required="required"></td>
+                </tr>
+                <tr>
+                    <td><h3>Kilometers driven: </h3></td>
+                    <td><input class="textfield" name="Kms_Driven" required="required"></td>
+                </tr>
+                <tr>
+                    <td><h3>Previous owners: </h3></td>
+                    <td><select name="Owner" class="dropdown" required="required">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="3">2</option>
+                            <option value="3">3</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><h3>Fuel type: </h3></td>
+                    <td><select name="Fuel_Type" class="dropdown" required="required">
+                            <option value="Petrol">Petrol</option>
+                            <option value="Diesel">Diesel</option>
+                            <option value="CNG">CNG</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><h3>Are you A Dealer or Individual?</h3></td>
+                    <td><select name="Seller_Type" class="dropdown" required="required">
+                            <option value="Dealer">Dealer</option>
+                            <option value="Individual">Individual</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><h3>Transmission type: </h3></td>
+                    <td><select name="Transmission_Type" class="dropdown" required="required">
+                            <option value="Manual">Manual Car</option>
+                            <option value="Automatic">Automatic Car</option>
+                        </select></td>
+                </tr>
+                
+                
+            
+            
+
+            </table>
+            <div>
+                <button class="button" type="submit ">Calculate the Selling Price</button>
+            </div>
+            
+
+        </form>
+
+        
+
+        <br><br>
+        
+        <div class="pred">
+            <h1>{{ prediction_text }}</h1>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

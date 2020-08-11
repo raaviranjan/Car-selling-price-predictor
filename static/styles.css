@@ -1,0 +1,75 @@
+    body {
+        background-color: lightslategray;
+        text-align: center;
+        padding: 0px;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+    
+    table{
+        margin:0 auto;
+        text-align: left;
+    }
+    .heading{
+        text-align:center;
+    }
+    .button {
+      background-color: #e7e7e7; /* gray */
+      border: none;
+      color: black;
+      border-radius: 12px;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    
+    .button4:hover {background-color: #2b2d2f;}
+    
+    .pred{
+        
+        border: dashed;
+        margin: 0 22%;
+        background-color: azure;
+
+    }
+    
+    
+    #box {
+        border-radius: 60px;
+        border-color: 45px;
+        border-style: solid;
+        font-family: cursive;
+        text-align: center;
+        background-color: rgb(168, 131, 61);
+        font-size: medium;
+        position: absolute;
+        width: 700px;
+        bottom: 9%;
+        height: 850px;
+        right: 30%;
+        padding: 0px;
+        margin: 0px;
+        font-size: 14px;
+    }
+    
+    .dropdown {
+        width: 100%;
+        height: 31px;
+        text-align: center;
+        font-size: 16px;
+    }
+    
+    
+    .textfield {
+        
+        height: 25px;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    
